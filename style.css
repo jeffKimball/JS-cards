@@ -7,7 +7,63 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 90vh;
+}
+
+.container div:nth-child(1) {
+  background-image: url(images/cat.jpg);
+}
+
+.container div:nth-child(2) {
+  background-image: url(images/dog.jpg);
+}
+
+.container div:nth-child(3) {
+  background-image: url(images/fish.jpg);
+}
+
+.container div:nth-child(4) {
+  background-image: url(images/hamster.jpg);
+}
+
+.container div:nth-child(5) {
+  background-image: url(images/turtle.jpg);
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.5s ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
 }
